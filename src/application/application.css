@@ -1,0 +1,83 @@
+.root
+{
+	-fx-background-color: transparent;
+}
+
+.buttons
+{
+	-fx-background-radius: 0.7em;
+}
+.buttons:hover
+{
+	-fx-background-color:rgb(0,128,255)
+}
+
+.startButton
+{
+	-fx-background-color: rgb(0,128,192);
+	-fx-background-radius: 0.7em;
+}
+
+.startButton:hover
+{
+	-fx-background-color: rgb(0,128,255);
+}
+
+.keyboardButtons
+{
+	-fx-background-color: rgb(0,128,192);
+	-fx-background-radius: 5em;
+}
+
+.keyboardButtons:hover
+{
+	-fx-background-color: rgb(0,128,255);
+}
+
+.optionsButtons
+{
+	-fx-background-color:rgb(0,128,192);
+	-fx-background-radius:1em;
+
+}
+
+.optionsButtons:hover
+{
+	-fx-background-color:rgb(0,128,255);
+}
+/* 
+.list-view .list-cell
+{
+	-fx-font-size: 1.5em;
+	-fx-text-fill:green;
+	/*-fx-control-inner-background: black;
+}
+*/
+.list-view
+{
+	-fx-background-radius: 1em;
+}
+
+.list-view .list-cell:even
+{
+	-fx-background-color: #009688;
+	-fx-font-size: 1.5em;
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+}
+
+.list-view .list-cell:odd
+{
+	-fx-background-color: #77c2bb;
+	-fx-font-size: 1.5em;
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+}
+
+.list-view:focused .list-cell:filled:focused:selected 
+{
+    -fx-background-color:  #3D4956;
+    -fx-background-insets: 0, 1, 2;
+    -fx-background: -fx-accent;
+    -fx-text-fill: white;
+}

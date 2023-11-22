@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="FXHangman">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/executables/FXHangman.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

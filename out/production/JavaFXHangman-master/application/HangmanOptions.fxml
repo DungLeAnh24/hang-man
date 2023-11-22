@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.paint.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import com.jfoenix.controls.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.BorderPane?>
+
+<Pane xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.OptionsController">
+   <children>
+      <VBox prefHeight="436.0" prefWidth="800.0">
+         <children>
+            <HBox fx:id="topBox" prefHeight="82.0" prefWidth="800.0" style="-fx-background-color: #3D4956;">
+               <children>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <JFXButton onAction="#openGameScene" styleClass="buttons" stylesheets="@application.css">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true" scaleX="0.5" scaleY="0.5">
+                           <image>
+                              <Image url="@../images/play.png" />
+                           </image>
+                           <effect>
+                              <Bloom />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" cycleMethod="REFLECT" focusAngle="-99.46" focusDistance="0.09302325581395343" radius="0.3023255813953488">
+                           <stops>
+                              <Stop color="#90b2c3" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <JFXButton styleClass="buttons" stylesheets="@application.css">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true" scaleX="0.5" scaleY="0.5">
+                           <image>
+                              <Image url="@../images/settings.png" />
+                           </image>
+                           <effect>
+                              <Bloom />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" cycleMethod="REFLECT" focusAngle="-99.46" focusDistance="0.09302325581395343" radius="0.3023255813953488">
+                           <stops>
+                              <Stop color="#90b2c3" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <JFXButton onAction="#openMinScene" styleClass="buttons" stylesheets="@application.css">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true" scaleX="0.5" scaleY="0.5">
+                           <image>
+                              <Image url="@../images/min.png" />
+                           </image>
+                           <effect>
+                              <Bloom />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" cycleMethod="REFLECT" focusAngle="-99.46" focusDistance="0.09302325581395343" radius="0.3023255813953488">
+                           <stops>
+                              <Stop color="#90b2c3" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+                  <JFXButton onAction="#quitGame" styleClass="buttons" stylesheets="@application.css">
+                     <graphic>
+                        <ImageView pickOnBounds="true" preserveRatio="true" scaleX="0.5" scaleY="0.5">
+                           <image>
+                              <Image url="@../images/x.png" />
+                           </image>
+                           <effect>
+                              <Bloom />
+                           </effect>
+                        </ImageView>
+                     </graphic>
+                     <ripplerFill>
+                        <RadialGradient centerX="0.5" centerY="0.5" cycleMethod="REFLECT" focusAngle="-99.46" focusDistance="0.09302325581395343" radius="0.3023255813953488">
+                           <stops>
+                              <Stop color="#90b2c3" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </RadialGradient>
+                     </ripplerFill>
+                  </JFXButton>
+                  <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+               </children>
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect></HBox>
+            <VBox maxHeight="30.0" prefHeight="30.0" prefWidth="800.0">
+               <children>
+                  <HBox prefHeight="10.0" prefWidth="400.0" VBox.vgrow="NEVER">
+                     <children>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <ImageView fx:id="arrow" fitHeight="10.0" pickOnBounds="true" preserveRatio="true" scaleZ="0.0" translateX="-9.0" translateY="3.0">
+                           <image>
+                              <Image url="@../images/upArrow.png" />
+                           </image>
+                        </ImageView>
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Region HBox.hgrow="ALWAYS" />
+                        <Region HBox.hgrow="ALWAYS" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <BorderPane fx:id="mainBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="800.0" style="-fx-background-color: #3D4956;">
+               <effect>
+                  <Lighting>
+                     <bumpInput>
+                        <Shadow />
+                     </bumpInput>
+                     <light>
+                        <Light.Distant />
+                     </light>
+                  </Lighting>
+               </effect>
+               <left>
+                  <AnchorPane prefHeight="227.0" prefWidth="800.0" BorderPane.alignment="CENTER">
+                     <children>
+                        <JFXButton fx:id="addWordButton" buttonType="RAISED" defaultButton="true" layoutX="239.0" layoutY="135.0" onAction="#addWordWasHit" prefHeight="38.0" prefWidth="120.0" styleClass="optionsButtons" stylesheets="@application.css" text="Add Word" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font></JFXButton>
+                        <JFXButton fx:id="deleteWordButton" buttonType="RAISED" layoutX="239.0" layoutY="194.0" onAction="#deleteWordWasHit" prefHeight="38.0" prefWidth="120.0" styleClass="optionsButtons" stylesheets="@application.css" text="Delete Word" textFill="WHITE">
+                           <font>
+                              <Font size="17.0" />
+                           </font></JFXButton>
+                        <JFXTextField fx:id="addWordField" focusColor="#a4adc6" layoutX="388.0" layoutY="135.0" prefHeight="37.0" prefWidth="176.0" promptText=" enter a word" style="-fx-background-color: lightgray;">
+                           <font>
+                              <Font size="17.0" />
+                           </font>
+                        </JFXTextField>
+                        <JFXListView fx:id="wordBank" editable="true" layoutX="388.0" layoutY="194.0" prefHeight="163.0" prefWidth="176.0" style="-fx-background-color: #3D4956;" stylesheets="@application.css" verticalGap="1.0" />
+                        <JFXToggleButton fx:id="toggleDict" layoutX="239.0" layoutY="32.0" onAction="#toggleWasChanged" prefHeight="74.0" prefWidth="324.0" selected="true" size="12.0" text="Custom Dictionary" textFill="WHITE">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </JFXToggleButton>
+                     </children>
+                  </AnchorPane>
+               </left>
+            </BorderPane>
+         </children>
+      </VBox>
+   </children>
+</Pane>
