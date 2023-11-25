@@ -15,7 +15,7 @@
    <children>
       <VBox prefHeight="436.0" prefWidth="800.0">
          <children>
-            <HBox fx:id="topBox" prefHeight="82.0" prefWidth="800.0" style="-fx-background-color: #3D4956;">
+            <HBox fx:id="topBox" prefHeight="82.0" prefWidth="800.0" style="-fx-background-color: white;">
                <children>
                   <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
                   <JFXButton onAction="#openGameScene" styleClass="buttons" stylesheets="@application.css">
@@ -131,7 +131,7 @@
                   </HBox>
                </children>
             </VBox>
-            <BorderPane fx:id="mainBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="800.0" style="-fx-background-color: #3D4956;">
+            <BorderPane fx:id="mainBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="392.0" prefWidth="800.0" style="-fx-background-color: white;">
                <effect>
                   <Lighting>
                      <bumpInput>
@@ -159,7 +159,7 @@
                            </font>
                         </JFXTextField>
                         <JFXListView fx:id="wordBank" editable="true" layoutX="388.0" layoutY="194.0" prefHeight="163.0" prefWidth="176.0" style="-fx-background-color: #3D4956;" stylesheets="@application.css" verticalGap="1.0" />
-                        <JFXToggleButton fx:id="toggleDict" layoutX="239.0" layoutY="32.0" onAction="#toggleWasChanged" prefHeight="74.0" prefWidth="324.0" selected="true" size="12.0" text="Custom Dictionary" textFill="WHITE">
+                        <JFXToggleButton fx:id="toggleDict" layoutX="239.0" layoutY="32.0" onAction="#toggleWasChanged" prefHeight="74.0" prefWidth="324.0" selected="true" size="12.0" text="Custom Dictionary" textFill="BLACK">
                            <font>
                               <Font size="20.0" />
                            </font>

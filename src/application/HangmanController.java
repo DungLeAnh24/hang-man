@@ -68,7 +68,7 @@ public class HangmanController implements Initializable
 	private int failCounter = 1;
 	private Image imageObject;
 	private boolean isGameBeingPlayed;
-	private boolean isFirstPlay = true; //definitely is used | ignore warning
+	private boolean isFirstPlay = true;
 	private boolean hasAnimationStarted = false;
 	private Stage primaryStage;
 	
@@ -97,7 +97,7 @@ public class HangmanController implements Initializable
     	optionsScene = someScene;
     }
 
-    public void setMainParent(Parent someSceneParent)//for botton focus
+    public void setMainParent(Parent someSceneParent)
     {
     	mainSceneParent = someSceneParent;
     }
@@ -132,7 +132,7 @@ public class HangmanController implements Initializable
 		startButton.setVisible(false);
 		startButton.setDisable(true);
 
-		//reads current toggle state, and get's appropriate dictionary.
+
 		boolean isDictionaryCustom = FileInstantiation.getToggleState();
 		if(isDictionaryCustom)
 		{

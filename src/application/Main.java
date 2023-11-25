@@ -23,12 +23,10 @@ public class Main extends Application {
 			primaryStage.setAlwaysOnTop(true);
 			primaryStage.getIcons().add(new Image("/imageAssets/hangmanIcon.jpg"));
 
-			//making references to each scene to maintain the specific state when switching between them
-			//then adding those references to all controllers
+
 			FXMLLoader root = new FXMLLoader(getClass().getResource("HangmanFile.fxml"));
 		    Parent gameScenePane = root.load();
 		    Scene gameScene = new Scene(gameScenePane);
-		    
 		    
 		    
 		    FXMLLoader minPaneLoader = new FXMLLoader(getClass().getResource("HangmanMinimized.fxml"));
@@ -39,53 +37,48 @@ public class Main extends Application {
 	        Parent optionsSceneLoader = optionsPaneLoader.load();
 	        Scene optionsScene = new Scene(optionsSceneLoader);
 
-			// references for min and opt scene into the controller of the main scene
+
 	        HangmanController rootPaneController = (HangmanController) root.getController();
 	        rootPaneController.setMinScene(minScene);
 	        rootPaneController.setOptionsScene(optionsScene);
 	        rootPaneController.setMainParent(gameScenePane);
 
-	        // references for main and opt scene into the controller of the min scene
+
 	        MinimizedController minPaneController = (MinimizedController) minPaneLoader.getController();//
 	        minPaneController.setMainScene(gameScene);
 	        minPaneController.setOptionsScene(optionsScene);
         
-	        // references for main and min scene into the controller of the options scene
+
 	        OptionsController optionsPaneController = (OptionsController) optionsPaneLoader.getController();//
 	        optionsPaneController.setMainScene(gameScene);
 	        optionsPaneController.setMinScene(minScene);
 	        
-	        // references for controllers
+
 	        optionsPaneController.setRootPaneController(rootPaneController);
 	        optionsPaneController.setMinPaneController(minPaneController);
 	        minPaneController.setRootPaneController(rootPaneController);
 	        minPaneController.setOptionsPaneController(optionsPaneController);
 	        rootPaneController.setMinPaneController(minPaneController);
 	        rootPaneController.setOptionsPaneController(optionsPaneController);
-	        
-	        
-	             
-	        //the below line causes graphical errors during scene switching --- searching for a fix
-			primaryStage.initStyle(StageStyle.TRANSPARENT);//removes window decoration and makes stage transp
-			//primaryStage.initStyle(StageStyle.UNDECORATED);	
+
+
+			primaryStage.initStyle(StageStyle.TRANSPARENT);
 			
-			
-			
-			//adding the stylesheet to all scenes
+
 			gameScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			optionsScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 			minScene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
 
-			gameScene.setFill(javafx.scene.paint.Color.TRANSPARENT);//transp backgrd
+			gameScene.setFill(javafx.scene.paint.Color.TRANSPARENT);
 			optionsScene.setFill(javafx.scene.paint.Color.TRANSPARENT);
 			minScene.setFill(javafx.scene.paint.Color.TRANSPARENT);
 
-			gameScenePane.requestFocus();//makes it so no buttons are highlighted
+			gameScenePane.requestFocus();
 
 			primaryStage.setScene(gameScene);
 			primaryStage.show();
 
-			//transparency and draggable actions
+
 			makeParentDraggable(gameScenePane, primaryStage);
 			makeParentDraggable(minSceneLoader, primaryStage);
 			makeParentDraggable(optionsSceneLoader, primaryStage);        

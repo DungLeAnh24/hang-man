@@ -15,7 +15,7 @@
    <children>
       <VBox prefHeight="622.0" prefWidth="384.0">
          <children>
-            <HBox fx:id="topBox" prefHeight="89.0" prefWidth="800.0" style="-fx-background-color: #3D4956;">
+            <HBox fx:id="topBox" prefHeight="89.0" prefWidth="800.0" style="-fx-background-color: white;">
                <children>
                   <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
                   <JFXButton styleClass="buttons" stylesheets="@application.css">
@@ -131,7 +131,7 @@
                   </HBox>
                </children>
             </VBox>
-            <BorderPane fx:id="mainBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="800.0" style="-fx-background-color: #3D4956;">
+            <BorderPane fx:id="mainBox" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="541.0" prefWidth="800.0" style="-fx-background-color: white;">
                <bottom>
                   <VBox BorderPane.alignment="CENTER">
                      <children>
@@ -410,7 +410,7 @@
                         <HBox>
                            <children>
                               <Region HBox.hgrow="ALWAYS" />
-                              <Label fx:id="wordToGuess" prefHeight="57.0" textFill="WHITE" BorderPane.alignment="CENTER">
+                              <Label fx:id="wordToGuess" prefHeight="57.0" textFill="RED" BorderPane.alignment="CENTER">
                                  <font>
                                     <Font name="Baskerville Old Face" size="30.0" />
                                  </font>
